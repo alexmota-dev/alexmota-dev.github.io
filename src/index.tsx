@@ -10,6 +10,19 @@ import Login from "./pages/Login";
 
 const router = createBrowserRouter([
   {
+    
+    path: "/",
+    element: (
+      <div>
+        <h1>Hello World</h1>
+        <Link to="about">About Us</Link>
+        <Link to="login">Login</Link>
+
+      </div>
+    ),
+  },
+  {
+    
     path: "/alexmota-dev.github.io",
     element: (
       <div>
