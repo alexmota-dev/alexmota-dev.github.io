@@ -7,19 +7,14 @@ import {
 } from "react-router-dom";
 // import Login from "./pages/OldLogin";
 import Login from "./pages/Login";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
   {
     
     path: "/",
     element: (
-      <div>
-        <h1>Hello World</h1>
-        <a>Teste</a>
-        <Link to="about">About Us</Link>
-        <Link to="login">Login</Link>
-
-      </div>
+      <Home/>
     ),
   },
   {
@@ -40,6 +35,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
+    element: <Login />
+  },
+  {
+    path: "/register",
     element: <Login />
   },
 ]);

@@ -8,7 +8,14 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <Menu />
-      <div style={{ width: '20%', margin: '10vh auto', display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
+      <div
+        style={{
+          width: '20%',
+          margin: '10vh auto',
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column'
+        }}>
         <p>HOME</p>
       </div>
     </ThemeProvider>
