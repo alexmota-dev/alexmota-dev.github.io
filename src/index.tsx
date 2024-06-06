@@ -34,11 +34,11 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/alexmota-dev.github.io/about",
+    path: "/about",
     element: <div>About Us</div>,
   },
   {
-    path: "/alexmota-dev.github.io/login",
+    path: "/login",
     element: <Login />
   },
 ]);
