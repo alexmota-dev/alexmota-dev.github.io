@@ -7,7 +7,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { theme } from '../Theme';
+import { theme } from '../../Theme';
 import { ThemeProvider } from '@mui/material';
 
 export default function InputPassword({ onChange, error, value }: { onChange: Function, error?: string, value?: string }) {

@@ -1,4 +1,4 @@
-import { Note } from "./types/Note";
+import { Note } from "../types/Note";
 
 let notes: Note[] = [
   { id: 1, title: "Nota 1", text: "Texto da Nota 1" },

@@ -6,7 +6,7 @@ import * as yup from 'yup';
 import { register } from '../api/auth';
 import { validateFields } from '../validation';
 import { Menu } from '../components/Menu';
-import { InputTextField } from '../components/InputTextField';
+import { InputTextField } from '../components/Inputs/InputTextField';
 
 export default function SignUp() {
   const [name, setName] = useState('');
