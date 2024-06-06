@@ -16,8 +16,8 @@ const router = createBrowserRouter([
       <div>
         <h1>Hello World</h1>
         <a>Teste</a>
-        {/* <Link to="about">About Us</Link>
-        <Link to="login">Login</Link> */}
+        <Link to="about">About Us</Link>
+        <Link to="login">Login</Link>
 
       </div>
     ),
