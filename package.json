@@ -23,7 +23,7 @@
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
-  "homepage": "https://alexmota-dev.github.io/alexmota-dev.github.io",
+  "homepage": "https://alexmota-dev.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
