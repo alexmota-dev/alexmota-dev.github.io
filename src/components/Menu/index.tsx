@@ -29,14 +29,15 @@ export function Menu() {
           flexWrap: 'wrap',
           padding: '0.5vw',
           borderBottom: '1px solid #fff'
-        }}>
-        
+        }}
+      >
         <Stack
           direction="row"
           spacing={2}
           style={{
             marginRight: '1vw',
-          }}>
+          }}
+        >
           <a href='/'>
             <img alt='HOME' src={logo} style={{ width: '2vw' }}/>
           </a>
@@ -52,39 +53,40 @@ export function Menu() {
           </Button>
         </Stack>
 
-        {context.signed ? (
-          <Button
-            color='primary'
-            variant="contained"
-            endIcon={<LogoutIcon />}
-            onClick={logout}>
-              Sair
-          </Button>
-        ) : (
-          <Stack
+        <Stack
             direction="row"
             spacing={2}
             style={{
-              marginRight: '1vw',
-            }}>
+              marginRight: '2vw',
+            }}
+        >
+          {context.signed ? (
             <Button
               color='primary'
               variant="contained"
-              onClick={() => navigate(`/login`)}>
-                Entrar
+              endIcon={<LogoutIcon />}
+              onClick={logout}>
+                Sair
             </Button>
+          ) : (
+            <>
+              <Button
+                color='primary'
+                variant="contained"
+                onClick={() => navigate(`/login`)}>
+                  Entrar
+              </Button>
 
-            <Button
-              color='primary'
-              variant="contained"
-              onClick={() => navigate(`/register`)}>
-                Cadastrar
-            </Button>
-          </Stack>
-        )}
-        
-        {/* <Button style={{backgroundColor: '#fff', color: 'var(--primary)'}} onClick={() => navigate(`/login`)}>Entrar</Button> */}
-        {/* <Button style={{backgroundColor: '#fff', color: 'var(--primary)', marginLeft: '1vw'}} onClick={() => avigate(`/signup`)}>Cadastrar</Button> */}
-      </div>
+              <Button
+                color='primary'
+                variant="contained"
+                onClick={() => navigate(`/register`)}>
+                  Cadastrar
+              </Button>
+            </>
+          )
+          }
+        </Stack>
+    </div>
   );
 }
