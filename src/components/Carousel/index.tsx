@@ -52,7 +52,7 @@ export const Carousel = () => {
   };
 
   return (
-    <>
+    <div>
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={page}
@@ -87,6 +87,6 @@ export const Carousel = () => {
       <div className="prev" onClick={() => paginate(-1)}>
         <PreviousButton/>
       </div>
-    </>
+    </div>
   );
 };

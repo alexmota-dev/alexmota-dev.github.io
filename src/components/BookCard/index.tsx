@@ -3,24 +3,27 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import ShareIcon from '@mui/icons-material/Share';
 
-export default function BookCard() {
+interface BookCardProps {
+  key: number,
+  image: string,
+  title: string,
+  paragraph: string
+}
+
+export default function BookCard({ image, title, paragraph}: BookCardProps) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 310, margin:'1vw'}}>
       <CardActionArea>
-        {/* <CardMedia
-          component="img"
-          height="300"
-          image="https://cdn.rickriordan.com/wp-content/uploads/2016/03/11223943/1368051472-215x300.png"
-          alt="green iguana"
-        /> */}
         <div
           style={{
             display: 'flex',
             justifyContent: 'center'
           }}>
           <img
-            src='https://cdn.rickriordan.com/wp-content/uploads/2016/03/11223943/1368051472-215x300.png' 
+            src={image} 
+            alt={"Book-"+image?.toString()}
             style={{
               objectFit: 'cover',
             }}>
@@ -28,16 +31,25 @@ export default function BookCard() {
         </div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Book Percy Jackson [Title]
+            {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Book Percy Jackson [Paragraph]
+            {paragraph}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+      }}>
         <Button size="small" color="primary">
-          Share
+          <ShareIcon/>
+        </Button>
+        <Button size="small" color="primary"> 
+          Adicionar ao carinho
+        </Button>
+        <Button size="small" color="primary"> 
+          Comprar agora
         </Button>
       </CardActions>
     </Card>
