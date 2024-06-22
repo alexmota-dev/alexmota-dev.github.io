@@ -1,32 +1,8 @@
 import React from 'react';
 import BookCard from '../BookCard';
-import imageBook from '../../assets/percy-jackson-and-the-lightning-thief.png';
+import { Book } from '../../services/types/Book';
 
-interface Book {
-  title: string;
-  paragraph: string;
-}
-
-const books: Book[] = [
-  {
-    title: 'Percy Jackson and the Lightning Thief',
-    paragraph: 'In this book, Percy Jackson discovers he is a demigod son of Poseidon.',
-  },
-  {
-    title: 'Harry Potter and the Philosopher\'s Stone',
-    paragraph: 'Harry Potter, a young wizard, discovers his magical heritage and attends Hogwarts School of Witchcraft and Wizardry.',
-  },
-  {
-    title: 'Harry Potter and the Philosopher\'s Stone',
-    paragraph: 'Harry Potter, a young wizard, discovers his magical heritage and attends Hogwarts School of Witchcraft and Wizardry.',
-  },
-  {
-    title: 'Harry Potter and the Philosopher\'s Stone',
-    paragraph: 'Harry Potter, a young wizard, discovers his magical heritage and attends Hogwarts School of Witchcraft and Wizardry.',
-  },
-];
-
-export default function ListOfBooks() {
+export default function ListOfBooks({books, handleDelete, handleUpdate}: {books: Book[], handleDelete: (id: string) => void, handleUpdate: (id: string) => void}) {
   return (
     <div
       style={{
@@ -42,9 +18,9 @@ export default function ListOfBooks() {
       {books.map((book, index) => (
         <BookCard
           key={index}
-          image={imageBook}
-          title={book.title}
-          paragraph={book.paragraph}
+          book={book}
+          handleDelete={handleDelete}
+          handleUpdate={handleUpdate}
         />
       ))}
     </div>

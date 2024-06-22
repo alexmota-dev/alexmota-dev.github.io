@@ -4,17 +4,28 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import ShareIcon from '@mui/icons-material/Share';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import { Book } from '../../services/types/Book';
 
 interface BookCardProps {
   key: number,
-  image: string,
-  title: string,
-  paragraph: string
+  book: Book,
+  handleDelete: (id: string) => void,
+  handleUpdate: (id: string) => void
 }
 
-export default function BookCard({ image, title, paragraph}: BookCardProps) {
+export default function BookCard({ book, handleDelete, handleUpdate}: BookCardProps) {
+
   return (
-    <Card sx={{ maxWidth: 310, margin:'1vw'}}>
+    <Card style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      width: '300px',
+      height: '700px',
+      margin:'1vw'
+    }}>
       <CardActionArea>
         <div
           style={{
@@ -22,19 +33,21 @@ export default function BookCard({ image, title, paragraph}: BookCardProps) {
             justifyContent: 'center'
           }}>
           <img
-            src={image} 
-            alt={"Book-"+image?.toString()}
+            src={book.url} 
+            width={300}
+            height={450}
+            alt={book.title}
             style={{
-              objectFit: 'cover',
+              objectFit: 'fill',
             }}>
           </img>
         </div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {title}
+            {book.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {paragraph}
+            {book.storyline}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -42,14 +55,20 @@ export default function BookCard({ image, title, paragraph}: BookCardProps) {
         display: 'flex',
         justifyContent: 'space-between',
       }}>
-        <Button size="small" color="primary">
-          <ShareIcon/>
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => handleUpdate(book.id)}>
+          <EditIcon/>
         </Button>
         <Button size="small" color="primary"> 
           Adicionar ao carinho
         </Button>
-        <Button size="small" color="primary"> 
-          Comprar agora
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => handleDelete(book.id)}> 
+          <DeleteIcon/>
         </Button>
       </CardActions>
     </Card>

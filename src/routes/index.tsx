@@ -7,6 +7,7 @@ import { EnvelopCarousel } from '../components/Carousel/main';
 import { AuthContext } from '../contexts/auth';
 import PrivateRoute from '../PrivateRoute';
 import { About } from '../pages/About';
+import { AddBooks } from '../pages/AddBooks';
 
 const Routes: React.FC = () => {
   const { signed } = useContext(AuthContext);
@@ -21,6 +22,8 @@ const Routes: React.FC = () => {
 
   const otherRoutes = createBrowserRouter([
     { path: "/", element: <Home /> },
+    { path: "/add-books", element: <AddBooks /> },
+    { path: "/update-book/:id", element: <AddBooks /> },
     { path: "/login", element: <Login /> },
     { path: "/register", element: <Register /> },
     { path: "*", element: <Navigate to="/login" /> }

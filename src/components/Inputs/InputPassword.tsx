@@ -40,7 +40,7 @@ export default function InputPassword({ onChange, error, value }: { onChange: Fu
                           onMouseDown={handleMouseDownPassword}
                           edge="end"
                       >
-                          {showPassword ? <VisibilityOff style={{color: '#fff'}}/> : <Visibility  style={{color: '#fff'}}/>}
+                        {showPassword ? <VisibilityOff style={{color: '#fff'}}/> : <Visibility  style={{color: '#fff'}}/>}
                       </IconButton>
                   </InputAdornment>
               }

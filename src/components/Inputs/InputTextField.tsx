@@ -13,7 +13,7 @@ export function InputTextField({ onChange, label, error, value, type }: { onChan
                     error={!!error} 
                     helperText={error} 
                     id="outlined-basic" 
-                    label={label} 
+                    label={value ? '' : label} 
                     variant="outlined" 
                     onChange={(e) => onChange(e.currentTarget.value)}
                     style={{ margin: '1vh 0 1vh 0' }} />

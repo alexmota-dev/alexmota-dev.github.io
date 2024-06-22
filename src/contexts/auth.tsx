@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
-import * as api from '../services/api';
-import { UserLogin } from '../api/types/UserLogin';
+import { UserLogin } from '../services/types/UserLogin';
+import { api } from '../api';
 
 interface AuthContextData {
   signed: boolean;
@@ -30,7 +30,20 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   }, []);
 
   async function login(userData: UserLogin){
-    const response = await api.post('https://localhost:3000', userData);
+    const response = await api.post('/auth/login', userData);
+
+    if(response.status !== 200) return response.data
+    if(response.status === 200 && response.data){
+      setUser(response.data.user);
+      api.defaults.headers.Authorization = `Bearer ${response.data.token}`;
+
+      sessionStorage.setItem('@App:user', JSON.stringify(response.data.user));
+      sessionStorage.setItem('@App:token', response.data.token);
+    }
+  }
+
+  async function register(userData: UserLogin){
+    const response = await api.post('/auth/register', userData);
 
     if(response.status !== 200) return response.data
     if(response.status === 200 && response.data){

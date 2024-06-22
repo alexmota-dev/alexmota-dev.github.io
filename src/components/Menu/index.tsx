@@ -15,7 +15,7 @@ export function Menu() {
   function logout() {
     context.logout();
   }
-
+  //Esse componete precisa ser responsivo em uma versão mobile
   return (
       <div
         style={{
@@ -43,13 +43,13 @@ export function Menu() {
           </a>
           
           <Button
-            onClick={() => navigate(`/about`)}
+            onClick={() => navigate(`/add-books`)}
             variant="outlined"
             startIcon={<InfoIcon />}
             style={{
               marginRight: '1vw',
             }}>
-            Sobre nós
+            Adicionar Livros
           </Button>
         </Stack>
 
