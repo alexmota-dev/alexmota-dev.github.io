@@ -221,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 #home .home-container {
   position: relative;
   z-index: 2;
-  min-width: 300px;
+  min-width: 500px;
 }
 #home h1 {
   margin: 0 0 10px 0;
@@ -256,6 +256,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+  #home p{
+    font-size: 16px;
   }
 }
 
@@ -1006,6 +1009,13 @@ section {
   z-index: 996;
   display: flex;
   gap: 10px;
+}
+
+
+@media (max-width: 1199px) {
+  .language-selector {
+    right: 60px;
+  }
 }
 
 .lang-btn {

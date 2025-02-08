@@ -78,13 +78,13 @@
   <!-- ======= Home Section ======= -->
   <section id="home" class="d-flex flex-column justify-content-center align-items-center">
     <div class="home-container" data-aos="fade-in">
-      <h1>Alex Mota,</h1>
-      <p>I'm a <span class="typed" data-typed-items="
-        Web Developer,
-        Software Engineer,
-        DevOps Engineer,
-        Systems Architect
-      "></span></p>
+      <h1 id="home-title">Alex Mota,</h1>
+      <p id="home-description">I'm a <span class="typed" data-typed-items="
+      Web Developer,
+      Software Engineer,
+      DevOps Engineer,
+      Systems Architect
+    "></span></p>
     </div>
   </section>
   <!-- End Home -->
@@ -367,12 +367,18 @@
   </main>
   <!-- End #main -->
 
-  <div class="language-selector d-flex align-items-center justify-content-center">
+  <!-- <div class="language-selector d-flex align-items-center justify-content-center">
     <a href="#" class="lang-btn" data-lang="pt">
       <img src="https://flagcdn.com/w40/br.png" alt="Português">
     </a>
     <a href="#" class="lang-btn fa-eua" data-lang="en">
       <img src="https://flagcdn.com/w40/us.png" alt="English" class="img-fluid">
+    </a>
+  </div> -->
+
+  <div class="language-selector d-flex align-items-center justify-content-center">
+    <a href="#" id="lang-toggle" class="lang-btn" data-lang="en">
+      <img id="lang-icon" src="https://flagcdn.com/w40/us.png" alt="English">
     </a>
   </div>
 
@@ -395,7 +401,7 @@
   <!-- My JS Files -->
   <script src="core/view/skillsView.js"></script>
   <script src="core/view/projectListView.js"></script>
-  <script src="core/components/languageIcons.js"></script>
+  <script src="core/components/languageHangler.js"></script>
 
 
   <!-- Template Main JS File -->

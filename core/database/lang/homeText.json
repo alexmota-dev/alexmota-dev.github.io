@@ -1,0 +1,22 @@
+{
+  "en": {
+    "title": "Alex Mota,",
+    "description": "I'm a",
+    "roles": [
+      "Web Developer",
+      "Software Engineer",
+      "DevOps Engineer",
+      "Systems Architect"
+    ]
+  },
+  "pt": {
+    "title": "Alex Mota,",
+    "description": "Eu sou um",
+    "roles": [
+      "Desenvolvedor Web",
+      "Engenheiro de Software",
+      "Engenheiro DevOps",
+      "Arquiteto de Sistemas"
+    ]
+  }
+}
