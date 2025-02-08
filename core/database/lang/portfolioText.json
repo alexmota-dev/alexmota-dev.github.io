@@ -1,0 +1,22 @@
+{
+  "en": {
+    "sectionTitle": "Projects",
+    "description": "Projects To Be - Expect the best, Plan for the worst, and prepare to be surprised.",
+    "filters": {
+      "all": "All",
+      "app": "App",
+      "technology": "Technology",
+      "webDesign": "Web Design"
+    }
+  },
+  "pt": {
+    "sectionTitle": "Projetos",
+    "description": "Projetos a Serem - Esperar o melhor, planejar o pior e se preparar para ser surpreendido.",
+    "filters": {
+      "all": "Todos",
+      "app": "App",
+      "technology": "Tecnologia",
+      "webDesign": "Design Web"
+    }
+  }
+}

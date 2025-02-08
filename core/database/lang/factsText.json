@@ -1,0 +1,16 @@
+{
+  "en": {
+    "sectionTitle": "Facts",
+    "description": "A way of developing structure in a complex project, where the independent variables of time, cost, quality, resources and human behavior come together.",
+    "projectsDone": "Projects Done",
+    "projectsOngoing": "Projects Ongoing",
+    "linesOfCode": "Lines of code"
+  },
+  "pt": {
+    "sectionTitle": "Fatos",
+    "description": "Uma forma de desenvolver estrutura em projetos complexos, onde as variáveis independentes de tempo, custo, qualidade, recursos e comportamento humano se encontram.",
+    "projectsDone": "Projetos Concluídos",
+    "projectsOngoing": "Projetos em Andamento",
+    "linesOfCode": "Linhas de código"
+  }
+}

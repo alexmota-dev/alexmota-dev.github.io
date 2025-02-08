@@ -1,0 +1,24 @@
+{
+  "en": {
+    "home": "Home",
+    "about": "About",
+    "resume": "Resume",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "profileName": "Alex Mota",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "pt": {
+    "home": "Início",
+    "about": "Sobre",
+    "resume": "Currículo",
+    "projects": "Projetos",
+    "services": "Serviços",
+    "contact": "Contato",
+    "profileName": "Alex Mota",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  }
+}

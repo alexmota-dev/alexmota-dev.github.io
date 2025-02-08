@@ -1,0 +1,56 @@
+{
+  "en": {
+    "sectionTitle": "Resume",
+    "description": "Results-oriented individual with strong leadership, communication, proactive and problem-solving skills. Always looking for opportunities to challenge myself and to prove my skills and talents in emerging trends, I am very curious and always like to learn something new.",
+    "sumaryTitle": "Sumary",
+    "sumaryDescription": "Innovative and deadline-driven developer and developing user-centered material from initial concept to final, polished deliverable.",
+    "educationTitle": "Education",
+    "educationDetails": {
+      "degree": "Computer Science",
+      "period": "2021 - 2025",
+      "university": "Federal University of Ceara, Ceara"
+    },
+    "professionalExperienceTitle": "Professional Experience",
+    "experience": [
+      {
+        "position": "Development Trainee",
+        "period": "2023 - 2024",
+        "company": "NEWM",
+        "location": "São José do Rio Preto, SP"
+      },
+      {
+        "position": "Software Developement Jr",
+        "period": "2024 - Present",
+        "company": "FitBank",
+        "location": "Ceara, Brazil"
+      }
+    ]
+  },
+  "pt": {
+    "sectionTitle": "Resumo",
+    "description": "Indivíduo orientado a resultados, com forte liderança, comunicação, proatividade e habilidades para resolver problemas. Sempre procurando oportunidades para me desafiar e provar minhas habilidades e talentos nas tendências emergentes. Sou muito curioso e sempre gosto de aprender algo novo.",
+    "sumaryTitle": "Resumo",
+    "sumaryDescription": "Desenvolvedor inovador e orientado a prazos, criando materiais centrados no usuário desde o conceito inicial até o produto final e polido.",
+    "educationTitle": "Educação",
+    "educationDetails": {
+      "degree": "Ciência da Computação",
+      "period": "2021 - 2025",
+      "university": "Universidade Federal do Ceará, Ceará"
+    },
+    "professionalExperienceTitle": "Experiência Profissional",
+    "experience": [
+      {
+        "position": "Estagiário de Desenvolvimento",
+        "period": "2023 - 2024",
+        "company": "NEWM",
+        "location": "São José do Rio Preto, SP"
+      },
+      {
+        "position": "Desenvolvedor de Software Jr",
+        "period": "2024 - Presente",
+        "company": "FitBank",
+        "location": "Ceará, Brasil"
+      }
+    ]
+  }
+}

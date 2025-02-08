@@ -1,0 +1,22 @@
+{
+  "en": {
+    "sectionTitle": "About",
+    "role": "Full Stack Web Developer",
+    "quote": "\"Backend Developer - Engineering the unseen, powering the future.\"",
+    "emailLabel": "Email:",
+    "cityLabel": "City:",
+    "city": "Ceará, Brazil",
+    "freelanceLabel": "Freelance:",
+    "freelanceStatus": "Unavailable"
+  },
+  "pt": {
+    "sectionTitle": "Sobre",
+    "role": "Desenvolvedor Web Full Stack",
+    "quote": "\"Desenvolvedor Backend - Criando o invisível, impulsionando o futuro.\"",
+    "emailLabel": "Email:",
+    "cityLabel": "Cidade:",
+    "city": "Ceará, Brasil",
+    "freelanceLabel": "Freelance:",
+    "freelanceStatus": "Indisponível"
+  }
+}

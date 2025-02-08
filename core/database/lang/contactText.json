@@ -1,0 +1,22 @@
+{
+  "en": {
+    "sectionTitle": "Contact",
+    "sectionDescription": "Hi, if you're interested in talking to me, feel free to contact me.",
+    "locationTitle": "Location:",
+    "location": "Ceara, Brazil",
+    "emailTitle": "Email:",
+    "email": "alexmota.work@gmail.com",
+    "linkedinTitle": "LinkedIn:",
+    "linkedin": "linkedin.com/in/alexmota-dev"
+  },
+  "pt": {
+    "sectionTitle": "Contato",
+    "sectionDescription": "Olá, se você estiver interessado em falar comigo, fique à vontade para me contatar.",
+    "locationTitle": "Localização:",
+    "location": "Ceará, Brasil",
+    "emailTitle": "Email:",
+    "email": "alexmota.work@gmail.com",
+    "linkedinTitle": "LinkedIn:",
+    "linkedin": "linkedin.com/in/alexmota-dev"
+  }
+}

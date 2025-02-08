@@ -1,0 +1,36 @@
+{
+  "en": {
+    "sectionTitle": "What I can Do",
+    "services": [
+      {
+        "title": "Backend Developer",
+        "description": "A robust backend is the foundation of any great application, ensuring performance, security, and seamless data flow."
+      },
+      {
+        "title": "Web Design",
+        "description": "Web Design is not just what it looks like and feels like. Design is how it works."
+      },
+      {
+        "title": "Web Development",
+        "description": "A Strategic approach to website design and development."
+      }
+    ]
+  },
+  "pt": {
+    "sectionTitle": "O que Eu Posso Fazer",
+    "services": [
+      {
+        "title": "Desenvolvedor Backend",
+        "description": "Um backend robusto é a base de qualquer grande aplicação, garantindo desempenho, segurança e fluxo de dados sem interrupções."
+      },
+      {
+        "title": "Design de Websites",
+        "description": "Design de Websites não é apenas como ele se parece ou como se sente. Design é como ele funciona."
+      },
+      {
+        "title": "Desenvolvimento Web",
+        "description": "Uma abordagem estratégica para o design e desenvolvimento de websites."
+      }
+    ]
+  }
+}
