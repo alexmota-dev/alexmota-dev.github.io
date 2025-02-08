@@ -1,0 +1,16 @@
+export const skills = [
+  { name: "HTML", value: 95 },
+  { name: "CSS", value: 90 },
+  { name: "JavaScript", value: 85 },
+  { name: "VueJs", value: 90 },
+  { name: "ReactJS", value: 94 },
+  { name: "C", value: 85 },
+  { name: "C++", value: 80 },
+  { name: "Python", value: 90 },
+  { name: "Django", value: 95 },
+  { name: "Flask", value: 80 },
+  { name: "Django RESTFramework", value: 80 },
+  { name: "Node JS", value: 80 },
+  { name: "Express", value: 80 },
+  { name: "TypeScript", value: 90 },
+];
