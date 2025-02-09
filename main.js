@@ -94,6 +94,11 @@
     select('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
+
+    let body = select('body')
+    if (body.classList.contains('mobile-nav-active')) {
+      body.addEventListener('click', closeNavOutside);
+    }
   })
 
   /**
@@ -101,18 +106,29 @@
    */
   on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
-      e.preventDefault()
+      e.preventDefault();
 
-      let body = select('body')
+      let body = select('body');
       if (body.classList.contains('mobile-nav-active')) {
-        body.classList.remove('mobile-nav-active')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
+        select('body').classList.toggle('mobile-nav-active');
+        let navbarToggle = select('.mobile-nav-toggle');
+        navbarToggle.classList.toggle('bi-list');
+        navbarToggle.classList.toggle('bi-x');
       }
       scrollto(this.hash)
     }
   }, true)
+
+  function closeNavOutside(e) {
+    let elementHTML = e.target;
+
+    if (elementHTML.id == "home" || elementHTML.id == "nav-toggle") {
+      select('body').classList.toggle('mobile-nav-active');
+      let navbarToggle = select('.mobile-nav-toggle');
+      navbarToggle.classList.toggle('bi-list');
+      navbarToggle.classList.toggle('bi-x');
+    }
+  }
 
   /**
    * Scroll with ofset on page load with hash links in the url
