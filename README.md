@@ -7,5 +7,12 @@
 ### Sintam-se a vontade para dar sugestões de melhoria ou reportar bugs 🐛
 
 
+### Abaixo uma previa do site:
+![Image](https://github.com/user-attachments/assets/d96fabf6-bb14-4e81-9775-1d42742b0576)
+
+
+
+
+
 
 https://alexmota-dev.github.io
