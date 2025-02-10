@@ -1,13 +1,11 @@
 document.getElementById("lang-toggle").addEventListener("click", function (event) {
-  event.preventDefault(); // Evita recarregar a página ao clicar
+  event.preventDefault();
 
   const langIcon = document.getElementById("lang-icon");
-  let currentLang = this.getAttribute("data-lang"); // Obtém o idioma atual do botão
+  let currentLang = this.getAttribute("data-lang");
 
-  // Define o novo idioma
   const newLang = currentLang === "en" ? "pt" : "en";
 
-  // Atualiza o atributo do botão
   this.setAttribute("data-lang", newLang);
 
   // Altera o ícone da bandeira
@@ -17,31 +15,13 @@ document.getElementById("lang-toggle").addEventListener("click", function (event
 
   langIcon.alt = newLang === "en" ? "English" : "Português";
 
-  console.log("Idioma trocado para:", newLang);
-
-  // Salva a escolha do idioma no localStorage
   localStorage.setItem("language", newLang);
 
-  // Chama a função para carregar os textos no novo idioma
   loadLanguage(newLang);
 });
 
-
-// document.querySelectorAll(".lang-btn").forEach((btn) => {
-//   btn.addEventListener("click", function () {
-//     const lang = this.getAttribute("data-lang");
-//     console.log("Tentativa de troca de idioma");
-
-//     if (lang) {
-//       console.log("Idioma escolhido:", lang);
-//       loadLanguage(lang);
-//     }
-//   });
-// });
-
 let currentLang = localStorage.getItem("language") || "en";
 
-// Função para carregar o JSON de textos e atualizar a página
 function loadLanguage(lang) {
   console.log("Carregando idioma:", lang);
 
@@ -93,8 +73,6 @@ function loadAboutSectionLanguage(lang) {
         aboutListItems[0].innerHTML = `<i class="bi bi-chevron-right"></i> <strong>${data[lang].emailLabel}</strong> <span>alexmota.work@gmail.com</span>`;
         aboutListItems[1].innerHTML = `<i class="bi bi-chevron-right"></i> <strong>${data[lang].cityLabel}</strong> <span>${data[lang].city}</span>`;
         aboutListItems[2].innerHTML = `<i class="bi bi-chevron-right"></i> <strong>${data[lang].freelanceLabel}</strong> <span>${data[lang].freelanceStatus}</span>`;
-
-        console.log("Seção 'About' traduzida com sucesso!");
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'About':", error));
@@ -112,8 +90,6 @@ function loadFactsSectionLanguage(lang) {
         factsBoxes[0].querySelector("p strong").innerText = data[lang].projectsDone;
         factsBoxes[1].querySelector("p strong").innerText = data[lang].projectsOngoing;
         factsBoxes[2].querySelector("p strong").innerText = data[lang].linesOfCode;
-
-        console.log("Seção 'Facts' traduzida com sucesso!");
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Facts':", error));
@@ -126,8 +102,6 @@ function loadSkillsSectionLanguage(lang) {
       if (data[lang]) {
         document.querySelector("#skills .section-title h2").innerText = data[lang].sectionTitle;
         document.querySelector("#skills .section-title p").innerText = data[lang].description;
-
-        console.log("Seção 'Skills' traduzida com sucesso!");
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Skills':", error));
@@ -138,11 +112,9 @@ function loadResumeSectionLanguage(lang) {
     .then((response) => response.json())
     .then((data) => {
       if (data[lang]) {
-        // Atualiza o título e descrição da seção
         document.querySelector("#resume .section-title h2").innerText = data[lang].sectionTitle;
         document.querySelector("#resume .section-title p").innerText = data[lang].description;
 
-        // Atualiza os títulos e descrições de sumário, educação e experiência profissional
         document.querySelector("#resume .resume-title").innerText = data[lang].sumaryTitle;
         document.querySelector("#resume .resume-item h4").innerText = data[lang].sumaryDescription;
 
@@ -150,7 +122,6 @@ function loadResumeSectionLanguage(lang) {
         document.querySelector("#resume .resume-item:nth-of-type(2) h5").innerText = data[lang].educationDetails.period;
         document.querySelector("#resume .resume-item:nth-of-type(2) em").innerText = data[lang].educationDetails.university;
 
-        // Atualiza a experiência profissional
         const experienceItems = document.querySelectorAll(".resume-item");
         experienceItems[1].querySelector("h4").innerText = data[lang].experience[0].position;
         experienceItems[1].querySelector("h5").innerText = data[lang].experience[0].period;
@@ -161,8 +132,6 @@ function loadResumeSectionLanguage(lang) {
         experienceItems[2].querySelector("h5").innerText = data[lang].experience[1].period;
         experienceItems[2].querySelector("h6").innerHTML = `<a href="https://www.linkedin.com/company/${data[lang].experience[1].company.toLowerCase()}/" target="_blank">${data[lang].experience[1].company}</a>`;
         experienceItems[2].querySelector("em").innerText = data[lang].experience[1].location;
-
-        console.log("Seção 'Resume' traduzida com sucesso!");
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Resume':", error));
@@ -173,18 +142,14 @@ function loadPortfolioSectionLanguage(lang) {
     .then((response) => response.json())
     .then((data) => {
       if (data[lang]) {
-        // Atualiza o título e a descrição da seção
         document.querySelector("#projects .section-title h2").innerText = data[lang].sectionTitle;
         document.querySelector("#projects .section-title p").innerText = data[lang].description;
 
-        // Atualiza os filtros do portfólio
         const filters = document.querySelectorAll("#portfolio-flters li");
         filters[0].innerText = data[lang].filters.all;
         filters[1].innerText = data[lang].filters.app;
         filters[2].innerText = data[lang].filters.technology;
         filters[3].innerText = data[lang].filters.webDesign;
-
-        console.log("Seção 'Portfolio' traduzida com sucesso!");
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Portfolio':", error));
@@ -195,10 +160,8 @@ function loadServicesSectionLanguage(lang) {
     .then((response) => response.json())
     .then((data) => {
       if (data[lang]) {
-        // Atualiza o título da seção
         document.querySelector("#services .section-title h2").innerText = data[lang].sectionTitle;
 
-        // Atualiza os serviços
         const serviceBoxes = document.querySelectorAll("#services .icon-box");
 
         serviceBoxes[0].querySelector(".title a").innerText = data[lang].services[0].title;
@@ -209,8 +172,6 @@ function loadServicesSectionLanguage(lang) {
 
         serviceBoxes[2].querySelector(".title a").innerText = data[lang].services[2].title;
         serviceBoxes[2].querySelector(".description").innerText = data[lang].services[2].description;
-
-        console.log("Seção 'Services' traduzida com sucesso!");
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Services':", error));
@@ -221,11 +182,9 @@ function loadContactSectionLanguage(lang) {
     .then((response) => response.json())
     .then((data) => {
       if (data[lang]) {
-        // Atualiza o título e a descrição da seção
         document.querySelector("#contact .section-title h2").innerText = data[lang].sectionTitle;
         document.querySelector("#contact .section-title p").innerText = data[lang].sectionDescription;
 
-        // Atualiza os detalhes de contato
         document.querySelector("#contact .address h4").innerText = data[lang].locationTitle;
         document.querySelector("#contact .address p").innerText = data[lang].location;
 
@@ -234,8 +193,6 @@ function loadContactSectionLanguage(lang) {
 
         document.querySelector("#contact .linkedin h4").innerText = data[lang].linkedinTitle;
         document.querySelector("#contact .linkedin p a").innerText = data[lang].linkedin;
-
-        console.log("Seção 'Contact' traduzida com sucesso!");
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Contact':", error));
@@ -257,10 +214,8 @@ function loadHeaderSectionLanguage(lang) {
     .then((response) => response.json())
     .then((data) => {
       if (data[lang]) {
-        // Atualiza o nome no perfil
         document.querySelector("#header .profile h1").innerText = data[lang].profileName;
         
-        // Atualiza os links de navegação
         document.querySelector(".header-home").innerText = data[lang].home;
         document.querySelector(".header-about").innerText = data[lang].about;
         document.querySelector(".header-resume").innerText = data[lang].resume;
@@ -268,7 +223,6 @@ function loadHeaderSectionLanguage(lang) {
         document.querySelector(".header-services").innerText = data[lang].services;
         document.querySelector(".header-contact").innerText = data[lang].contact;
 
-        // Atualiza os links sociais
         document.querySelector("#header .social-links .google-plus").setAttribute('title', data[lang].github);
         document.querySelector("#header .social-links .linkedin").setAttribute('title', data[lang].linkedin);
 
