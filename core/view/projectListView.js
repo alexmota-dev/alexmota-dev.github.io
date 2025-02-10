@@ -13,9 +13,9 @@ projects.forEach(({ title, category, image }) => {
   const projectHTML = `
   <div class="col-lg-4 col-md-6 portfolio-item filter-${category.replace(' ', '_')}">
     <div class="portfolio-wrap">
-      <img src="img/projects/${image}" class="img-fluid" alt="${title}">
+      <img src="img/Projects/${image}" class="img-fluid" alt="${title}">
       <div class="portfolio-links">
-        <a href="img/projects/${image}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${title}">
+        <a href="img/Projects/${image}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${title}">
           <i class="bx bx-plus"></i>
         </a>
         <a href="https://github.com/alexmota-dev" title="More Details">
