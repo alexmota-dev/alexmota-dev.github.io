@@ -8,11 +8,7 @@
 
 
 ### Abaixo uma previa do site:
-![Image](https://github.com/user-attachments/assets/d96fabf6-bb14-4e81-9775-1d42742b0576)
 
-
-
-
-
+![Image](img/gif/ALL.gif)
 
 https://alexmota-dev.github.io
