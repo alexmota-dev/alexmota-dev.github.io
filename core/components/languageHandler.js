@@ -1,19 +1,21 @@
 document.getElementById("lang-toggle").addEventListener("click", function (event) {
   event.preventDefault();
 
-  const langIcon = document.getElementById("lang-icon");
+  const iconFlag = document.getElementById("lang-icon");
   let currentLang = this.getAttribute("data-lang");
+
+  let brazilFlag = "https://flagcdn.com/w40/br.png";
+  let englishFlag = "https://flagcdn.com/w40/us.png";
 
   const newLang = currentLang === "en" ? "pt" : "en";
 
   this.setAttribute("data-lang", newLang);
 
-  // Altera o ícone da bandeira
-  langIcon.src = newLang === "en" 
-    ? "https://flagcdn.com/w40/us.png" 
-    : "https://flagcdn.com/w40/br.png";
+  iconFlag.src = newLang === "en"
+    ? englishFlag
+    : brazilFlag;
 
-  langIcon.alt = newLang === "en" ? "English" : "Português";
+  iconFlag.alt = newLang === "en" ? "English" : "Português";
 
   localStorage.setItem("language", newLang);
 
@@ -215,7 +217,7 @@ function loadHeaderSectionLanguage(lang) {
     .then((data) => {
       if (data[lang]) {
         document.querySelector("#header .profile h1").innerText = data[lang].profileName;
-        
+
         document.querySelector(".header-home").innerText = data[lang].home;
         document.querySelector(".header-about").innerText = data[lang].about;
         document.querySelector(".header-resume").innerText = data[lang].resume;
