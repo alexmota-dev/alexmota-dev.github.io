@@ -25,8 +25,6 @@ document.getElementById("lang-toggle").addEventListener("click", function (event
 let currentLang = localStorage.getItem("language") || "en";
 
 function loadLanguage(lang) {
-  console.log("Carregando idioma:", lang);
-
   loadHeaderSectionLanguage(lang);
   loadHomeSectionLanguage(lang);
   loadAboutSectionLanguage(lang);
@@ -37,7 +35,6 @@ function loadLanguage(lang) {
   loadServicesSectionLanguage(lang);
   loadContactSectionLanguage(lang);
   loadModalLanguage(lang);
-
 }
 
 function loadHomeSectionLanguage(lang) {
