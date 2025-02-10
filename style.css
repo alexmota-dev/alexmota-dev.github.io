@@ -1049,3 +1049,44 @@ section {
   border-radius: 50%;
   object-fit: cover;
 }
+
+.arrow-modal {
+  position: fixed;
+  top: 15px;
+  right: 70px;
+  z-index: 996;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  animation: fadeOut 3s forwards 3s;
+}
+
+@media (max-width: 1199px) {
+  .arrow-modal {
+    right: 120px;
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid white;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
