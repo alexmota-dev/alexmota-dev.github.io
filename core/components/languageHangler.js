@@ -54,6 +54,8 @@ function loadLanguage(lang) {
   loadPortfolioSectionLanguage(lang);
   loadServicesSectionLanguage(lang);
   loadContactSectionLanguage(lang);
+  loadModalLanguage(lang);
+
 }
 
 function loadHomeSectionLanguage(lang) {
@@ -237,6 +239,17 @@ function loadContactSectionLanguage(lang) {
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Contact':", error));
+}
+
+function loadModalLanguage(lang) {
+  fetch("core/database/lang/arrowModal.json")
+    .then((response) => response.json())
+    .then((data) => {
+      if (data[lang]) {
+        document.querySelector("#arrow-modal-text").innerText = data[lang].text;
+      }
+    })
+    .catch((error) => console.error("Erro ao carregar idioma da seção 'Modal':", error));
 }
 
 function loadHeaderSectionLanguage(lang) {
