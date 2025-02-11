@@ -106,35 +106,56 @@ function loadSkillsSectionLanguage(lang) {
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Skills':", error));
 }
 
+function buildResumeSection(data) {
+  const resumeSection = document.getElementById("resume");
+  resumeSection.innerHTML = `
+    <div class="container">
+      <div class="section-title">
+        <h2>${data.sectionTitle}</h2>
+        <p>${data.description}</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-up">
+          <h3 class="resume-title">${data.sumaryTitle}</h3>
+          <div class="resume-item pb-0">
+            <h4>Alex Mota</h4>
+            <p><em>${data.sumaryDescription}</em></p>
+          </div>
+          <h3 class="resume-title">${data.educationTitle}</h3>
+          <div class="resume-item">
+            <h4>${data.educationDetails.degree}</h4>
+            <h5>${data.educationDetails.period}</h5>
+            <p><em>${data.educationDetails.university}</em></p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="resume-title">${data.professionalExperienceTitle}</h3>
+          ${data.experience.map(exp => `
+            <div class="resume-item">
+              <h4>${exp.position}</h4>
+              <h5>${exp.period}</h5>
+              <h6><a href="https://www.linkedin.com/company/${exp.company.toLowerCase()}/" target="_blank">${exp.company}</a></h6>
+              <p><em>${exp.location}</em></p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+
 function loadResumeSectionLanguage(lang) {
   fetch("core/database/lang/resumeText.json")
-    .then((response) => response.json())
-    .then((data) => {
+    .then(response => response.json())
+    .then(data => {
       if (data[lang]) {
-        document.querySelector("#resume .section-title h2").innerText = data[lang].sectionTitle;
-        document.querySelector("#resume .section-title p").innerText = data[lang].description;
-
-        document.querySelector("#resume .resume-title").innerText = data[lang].sumaryTitle;
-        document.querySelector("#resume .resume-item h4").innerText = data[lang].sumaryDescription;
-
-        document.querySelector("#resume .resume-item:nth-of-type(2) h4").innerText = data[lang].educationDetails.degree;
-        document.querySelector("#resume .resume-item:nth-of-type(2) h5").innerText = data[lang].educationDetails.period;
-        document.querySelector("#resume .resume-item:nth-of-type(2) em").innerText = data[lang].educationDetails.university;
-
-        const experienceItems = document.querySelectorAll(".resume-item");
-        experienceItems[1].querySelector("h4").innerText = data[lang].experience[0].position;
-        experienceItems[1].querySelector("h5").innerText = data[lang].experience[0].period;
-        experienceItems[1].querySelector("h6").innerHTML = `<a href="https://www.linkedin.com/company/${data[lang].experience[0].company.toLowerCase()}/" target="_blank">${data[lang].experience[0].company}</a>`;
-        experienceItems[1].querySelector("em").innerText = data[lang].experience[0].location;
-
-        experienceItems[2].querySelector("h4").innerText = data[lang].experience[1].position;
-        experienceItems[2].querySelector("h5").innerText = data[lang].experience[1].period;
-        experienceItems[2].querySelector("h6").innerHTML = `<a href="https://www.linkedin.com/company/${data[lang].experience[1].company.toLowerCase()}/" target="_blank">${data[lang].experience[1].company}</a>`;
-        experienceItems[2].querySelector("em").innerText = data[lang].experience[1].location;
+        buildResumeSection(data[lang]);
       }
     })
-    .catch((error) => console.error("Erro ao carregar idioma da seção 'Resume':", error));
+    .catch(error => console.error("Erro ao carregar idioma da seção 'Resume':", error));
 }
+
 
 function loadPortfolioSectionLanguage(lang) {
   fetch("core/database/lang/portfolioText.json")
