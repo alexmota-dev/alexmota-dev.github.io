@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("core/database/lang/resumeText.json")
     .then(response => response.json())
     .then(data => {
-      buildResumeSection(data["en"]);
+      buildResumeSectionForJson(data["en"]);
     })
     .catch(error => console.error("Erro ao carregar a seção 'Resume':", error));
 });

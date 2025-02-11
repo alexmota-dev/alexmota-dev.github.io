@@ -17,8 +17,12 @@ document.getElementById("lang-toggle").addEventListener("click", function (event
 
   iconFlag.alt = newLang === "en" ? "English" : "Português";
 
+  localStorage.setItem("language", newLang);
+
   loadLanguage(newLang);
 });
+
+let currentLang = localStorage.getItem("language") || "en";
 
 function loadLanguage(lang) {
   loadHeaderSectionLanguage(lang);
@@ -64,10 +68,15 @@ function buildHomeSectionForJson(data) {
   document.getElementById("home-title").innerText = data.title;
   document.getElementById("home-description").innerHTML = `${data.description} <span class="typed" data-typed-items="${data.roles.join(", ")}"></span>`;
 
+  // Salva a escolha do idioma
+  localStorage.setItem("language", lang);
+
+  console.log(data);
+  console.log(data[lang]);
+
   // ✅ Reinicializa Typed.js após a troca de idioma
   restartTyped();
 }
-
 
 function loadHomeSectionLanguage(lang) {
   fetch("core/database/lang/homeText.json")
@@ -227,10 +236,6 @@ function loadContactSectionLanguage(lang) {
 
 function buildFooterSectionForJson(data) {
   document.querySelector("#footer .copyright").innerText = data.copyright;
-}
-
-function buildModalSectionForJson(data) {
-  document.querySelector("#arrow-modal-text").innerText = data.text;
 }
 
 function loadModalLanguage(lang) {
