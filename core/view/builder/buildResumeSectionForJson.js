@@ -35,5 +35,3 @@ function buildResumeSectionForJson(data) {
     </div>
   `;
 }
-
-window.buildResumeSectionForJson = buildResumeSectionForJson;
