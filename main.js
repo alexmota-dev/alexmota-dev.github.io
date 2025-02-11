@@ -110,10 +110,7 @@
   function toggleNavigationMobile(e) {
     let elementHTML = e.target;
 
-    console.log(elementHTML);
-
     if (!elementHTML.classList.contains("header")) {
-      console.log("O menu esta aberto e deve ser fechado")
       select('body').classList.toggle('mobile-nav-active');
       let navbarToggle = select('.mobile-nav-toggle');
       navbarToggle.classList.toggle('bi-list');

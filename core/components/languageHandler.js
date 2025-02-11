@@ -168,10 +168,6 @@ function restartTyped() {
         backDelay: 1000,
         loop: true,
       });
-
-      console.log("Typed.js reinicializado com sucesso!");
-    } else {
-      console.warn("Elemento '.typed' não encontrado ao reinicializar Typed.js.");
     }
   }, 100); // Pequeno delay para garantir que o DOM foi atualizado
 }
