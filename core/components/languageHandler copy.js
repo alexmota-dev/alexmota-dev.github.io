@@ -48,20 +48,6 @@ function loadHeaderSectionLanguage(lang) {
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Header':", error));
 }
 
-function buildHomeSectionForJson(data) {
-  document.getElementById("home-title").innerText = data.title;
-  document.getElementById("home-description").innerHTML = `${data.description} <span class="typed" data-typed-items="${data.roles.join(", ")}"></span>`;
-
-  // Salva a escolha do idioma
-  localStorage.setItem("language", lang);
-
-  console.log(data);
-  console.log(data[lang]);
-
-  // ✅ Reinicializa Typed.js após a troca de idioma
-  restartTyped();
-}
-
 function loadHomeSectionLanguage(lang) {
   fetch("core/database/lang/homeText.json")
     .then((response) => response.json())
@@ -72,19 +58,6 @@ function loadHomeSectionLanguage(lang) {
     })
     .catch((error) => console.error("Erro ao carregar idioma:", error));
 }
-
-function buildAboutSectionForJson(data) {
-  document.querySelector("#about .section-title h2").innerText = data.sectionTitle;
-  document.querySelector("#about .content h3").innerText = data.role;
-  document.querySelector("#about .content .fst-italic").innerText = data.quote;
-
-  const aboutListItems = document.querySelectorAll("#about .content ul li");
-
-  aboutListItems[0].innerHTML = `<i class="bi bi-chevron-right"></i> <strong>${data.emailLabel}</strong> <span>alexmota.work@gmail.com</span>`;
-  aboutListItems[1].innerHTML = `<i class="bi bi-chevron-right"></i> <strong>${data.cityLabel}</strong> <span>${data.city}</span>`;
-  aboutListItems[2].innerHTML = `<i class="bi bi-chevron-right"></i> <strong>${data.freelanceLabel}</strong> <span>${data.freelanceStatus}</span>`;
-}
-
 
 function loadAboutSectionLanguage(lang) {
   fetch("core/database/lang/aboutText.json")
@@ -97,16 +70,6 @@ function loadAboutSectionLanguage(lang) {
     .catch((error) => console.error("Erro ao carregar idioma da seção 'About':", error));
 }
 
-function buildFactsSectionForJson(data) {
-  document.querySelector("#facts .section-title h2").innerText = data.sectionTitle;
-  document.querySelector("#facts .section-title p").innerText = data.description;
-
-  const factsBoxes = document.querySelectorAll("#facts .count-box");
-  factsBoxes[0].querySelector("p strong").innerText = data.projectsDone;
-  factsBoxes[1].querySelector("p strong").innerText = data.projectsOngoing;
-  factsBoxes[2].querySelector("p strong").innerText = data.linesOfCode;
-}
-
 function loadFactsSectionLanguage(lang) {
   fetch("core/database/lang/factsText.json")
     .then((response) => response.json())
@@ -116,11 +79,6 @@ function loadFactsSectionLanguage(lang) {
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Facts':", error));
-}
-
-function buildSkillsSectionForJson(data) {
-  document.querySelector("#skills .section-title h2").innerText = data.sectionTitle;
-  document.querySelector("#skills .section-title p").innerText = data.description;
 }
 
 function loadSkillsSectionLanguage(lang) {
@@ -145,17 +103,6 @@ function loadResumeSectionLanguage(lang) {
     .catch(error => console.error("Erro ao carregar idioma da seção 'Resume':", error));
 }
 
-function buildPortfolioSectionForJson(data) {
-  document.querySelector("#projects .section-title h2").innerText = data.sectionTitle;
-  document.querySelector("#projects .section-title p").innerText = data.description;
-
-  const filters = document.querySelectorAll("#portfolio-flters li");
-  filters[0].innerText = data.filters.all;
-  filters[1].innerText = data.filters.app;
-  filters[2].innerText = data.filters.technology;
-  filters[3].innerText = data.filters.webDesign;
-}
-
 function loadPortfolioSectionLanguage(lang) {
   fetch("core/database/lang/portfolioText.json")
     .then((response) => response.json())
@@ -165,21 +112,6 @@ function loadPortfolioSectionLanguage(lang) {
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Portfolio':", error));
-}
-
-function buildServicesSectionForJson(data) {
-  document.querySelector("#services .section-title h2").innerText = data.sectionTitle;
-
-  const serviceBoxes = document.querySelectorAll("#services .icon-box");
-
-  serviceBoxes[0].querySelector(".title a").innerText = data.services[0].title;
-  serviceBoxes[0].querySelector(".description").innerText = data.services[0].description;
-
-  serviceBoxes[1].querySelector(".title a").innerText = data.services[1].title;
-  serviceBoxes[1].querySelector(".description").innerText = data.services[1].description;
-
-  serviceBoxes[2].querySelector(".title a").innerText = data.services[2].title;
-  serviceBoxes[2].querySelector(".description").innerText = data.services[2].description;
 }
 
 function loadServicesSectionLanguage(lang) {
@@ -193,20 +125,6 @@ function loadServicesSectionLanguage(lang) {
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Services':", error));
 }
 
-function buildContactSectionForJson(data) {
-  document.querySelector("#contact .section-title h2").innerText = data.sectionTitle;
-  document.querySelector("#contact .section-title p").innerText = data.description;
-
-  document.querySelector("#contact .address h4").innerText = data.locationTitle;
-  document.querySelector("#contact .address p").innerText = data.location;
-
-  document.querySelector("#contact .email h4").innerText = data.emailTitle;
-  document.querySelector("#contact .email p").innerText = data.email;
-
-  document.querySelector("#contact .linkedin h4").innerText = data.linkedinTitle;
-  document.querySelector("#contact .linkedin p a").innerText = data.linkedin;
-}
-
 function loadContactSectionLanguage(lang) {
   fetch("core/database/lang/contactText.json")
     .then((response) => response.json())
@@ -216,10 +134,6 @@ function loadContactSectionLanguage(lang) {
       }
     })
     .catch((error) => console.error("Erro ao carregar idioma da seção 'Contact':", error));
-}
-
-function buildFooterSectionForJson(data) {
-  document.querySelector("#footer .copyright").innerText = data.copyright;
 }
 
 function loadModalLanguage(lang) {
