@@ -13,10 +13,10 @@
     "professionalExperienceTitle": "Professional Experience",
     "experience": [
       {
-        "position": "Software Development Trainee",
+        "position": "Software Development",
         "period": "2023 - 2024",
         "company": "NEWM",
-        "location": "São José do Rio Preto, SP"
+        "location": "Remoto"
       },
       {
         "position": "Software Development",
@@ -40,13 +40,13 @@
     "professionalExperienceTitle": "Experiência Profissional",
     "experience": [
       {
-        "position": "Estagiário em Desenvolvimento",
+        "position": "Software Developer",
         "period": "2023 - 2024",
         "company": "NEWM",
         "location": "São José do Rio Preto, SP"
       },
       {
-        "position": "Desenvolvedor de Software",
+        "position": "Software Developer",
         "period": "2024 - Presente",
         "company": "FitBank",
         "location": "Ceará, Brasil"
