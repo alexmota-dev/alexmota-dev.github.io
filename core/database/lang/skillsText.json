@@ -1,10 +1,12 @@
 {
   "en": {
     "sectionTitle": "Skills",
-    "description": "Skill is the unified Force of Experience, Intellect And Passion in their Operation."
+    "description": "Skill is the unified Force of Experience, Intellect And Passion in their Operation.",
+    "time": "years"
   },
   "pt": {
     "sectionTitle": "Habilidades",
-    "description": "Habilidade é a força unificada da experiência, intelecto e paixão em sua operação."
+    "description": "Habilidade é a força unificada da experiência, intelecto e paixão em sua operação.",
+    "time": "anos"
   }
 }
