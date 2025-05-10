@@ -7,7 +7,7 @@
     "cityLabel": "City:",
     "city": "Ceará, Brazil",
     "freelanceLabel": "Freelance:",
-    "freelanceStatus": "Unavailable"
+    "freelanceStatus": "Available"
   },
   "pt": {
     "sectionTitle": "Sobre",
@@ -17,6 +17,6 @@
     "cityLabel": "Cidade:",
     "city": "Ceará, Brasil",
     "freelanceLabel": "Freelance:",
-    "freelanceStatus": "Indisponível"
+    "freelanceStatus": "Disponível"
   }
 }
