@@ -1,4 +1,11 @@
 const projects = [
+  {
+    title: "Chance Sports",
+    category: "Web_Design",
+    image: "web/chance-sports.png",
+    url: "https://chancesports.com.br/",
+    cover: true
+  },
   { title: "React - Full Stack Project", category: "Web_Design", image: "web/programaindiqueeganhe-login.png" },
   { title: "React - Full Stack Project", category: "Web_Design", image: "web/programaindiqueeganhe-register.png" },
   { title: "React - Full Stack Project", category: "Technology", image: "api/Authentication.jpg" },
@@ -9,19 +16,23 @@ const projects = [
 
 const portfolioContainer = document.querySelector(".portfolio-container");
 
-projects.forEach(({ title, category, image }) => {
+projects.forEach(({ title, category, image, url, cover }) => {
+  const detailsUrl = url || "https://github.com/alexmota-dev";
   const projectHTML = `
   <div class="col-lg-4 col-md-6 portfolio-item filter-${category.replace(' ', '_')}">
     <div class="portfolio-wrap">
-      <img src="img/Projects/${image}" class="img-fluid" alt="${title}">
+      <img src="img/Projects/${image}" class="img-fluid${cover ? " portfolio-cover" : ""}" alt="${title}">
       <div class="portfolio-links">
         <a href="img/Projects/${image}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="${title}">
           <i class="bx bx-plus"></i>
         </a>
-        <a href="https://github.com/alexmota-dev" title="More Details">
+        <a href="${detailsUrl}" target="_blank" rel="noopener noreferrer" title="${title}">
           <i class="bx bx-link"></i>
         </a>
       </div>
+    </div>
+    <div class="portfolio-info">
+      <h4>${title}</h4>
     </div>
   </div>
   `;

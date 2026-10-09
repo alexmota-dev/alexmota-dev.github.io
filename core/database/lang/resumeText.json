@@ -1,55 +1,127 @@
 {
   "en": {
     "sectionTitle": "Resume",
-    "description": "Results-oriented individual with strong leadership, communication, proactive and problem-solving skills. Always looking for opportunities to challenge myself and to prove my skills and talents in emerging trends, I am very curious and always like to learn something new.",
-    "sumaryTitle": "Sumary",
-    "sumaryDescription": "Innovative and deadline-driven developer and developing user-centered material from initial concept to final, polished deliverable.",
+    "description": "Full-stack software engineer with more than 4 years building web applications and distributed systems using React, TypeScript, Node.js, .NET, SQL, and cloud technologies. Experience in financial products, microservices, automated testing, messaging, and CI/CD.",
+    "sumaryTitle": "Summary",
+    "sumaryDescription": "I take products from technical definition through delivery, with a focus on quality, scalability, and user experience.",
     "educationTitle": "Education",
     "educationDetails": {
       "degree": "Computer Science",
-      "period": "2021 - 2025",
-      "university": "Federal University of Ceara, Ceara"
+      "period": "Mar 2021 – Dec 2025",
+      "university": "Federal University of Ceará, Ceará"
     },
     "professionalExperienceTitle": "Professional Experience",
     "experience": [
       {
-        "position": "Software Development",
-        "period": "2022 - 2023",
-        "company": "NEWM",
-        "location": "Remoto"
+        "position": "Full-Stack Developer",
+        "period": "Jul 2025 – Present",
+        "company": "Fundação FASTEF",
+        "url": "https://www.linkedin.com/company/fundacaoastef/",
+        "location": "São Paulo, SP (Remote)",
+        "highlights": [
+          "Develop and maintain web applications with React, TypeScript, and Vite, focused on performance and user experience.",
+          "Manage shared state with the Context API and custom hooks, and implement OAuth 2.0 authentication and authorization.",
+          "Write unit and integration tests with Vitest and Testing Library, and keep interfaces consistent with SCSS and ESLint."
+        ]
       },
       {
-        "position": "Software Development",
-        "period": "2024 - Present",
+        "position": "Full-Stack Developer",
+        "period": "Jul 2024 – Jul 2025",
+        "company": "Codgo.x",
+        "url": "https://www.linkedin.com/company/codgo-x/",
+        "location": "São Paulo, SP (Remote)",
+        "highlights": [
+          "Designed microservices with Node.js, TypeScript, Express, PostgreSQL, Prisma, RabbitMQ, and real-time communication via WebSocket/Socket.io.",
+          "Built web applications with Next.js and React, including multi-step authentication, search, custom profiles, an admin panel, real-time chat, and media upload, with AWS S3 and OpenAI content moderation.",
+          "Containerized services with Docker and automated build, test, and deploy pipelines with GitHub Actions."
+        ]
+      },
+      {
+        "position": "Full-Stack Developer",
+        "period": "Feb 2023 – Jul 2024",
         "company": "FitBank",
-        "location": "Ceara, Brazil"
+        "url": "https://www.linkedin.com/company/fitbank-450/",
+        "location": "Crateús, CE (On-site)",
+        "highlights": [
+          "Built and improved critical banking flows with .NET, ASP.NET MVC, Angular, SQL Server, Azure Functions, and Azure Service Bus.",
+          "Refactored services with DDD, Entity Framework Core, and Dapper, and contributed automated tests and code reviews.",
+          "Migrated hot data from SQL Server to MongoDB and deployed services with Docker and Kubernetes."
+        ]
+      },
+      {
+        "position": "Back-End Developer",
+        "period": "Jan 2022 – Feb 2023",
+        "company": "NEWM",
+        "url": "https://www.linkedin.com/company/newm/",
+        "location": "Rio Preto, SP (Remote)",
+        "highlights": [
+          "Developed and maintained APIs in a microservices architecture, focused on isolation and scalability.",
+          "Built dynamic interfaces with React and TypeScript, using Redux and the Context API for state management.",
+          "Added automated tests with Jest and React Testing Library, documented legacy behavior for migration, and joined code reviews."
+        ]
       }
     ]
   },
   "pt": {
     "sectionTitle": "Resumo",
-    "description": "Indivíduo orientado a resultados, com forte liderança, comunicação, proatividade e habilidades para resolver problemas. Sempre procurando oportunidades para me desafiar e provar minhas habilidades e talentos nas tendências emergentes. Sou muito curioso e sempre gosto de aprender algo novo.",
+    "description": "Engenheiro de software full-stack com mais de 4 anos no desenvolvimento de aplicações web e sistemas distribuídos, com React, TypeScript, Node.js, .NET, SQL e cloud. Experiência em produtos financeiros, microserviços, testes automatizados, mensageria e CI/CD.",
     "sumaryTitle": "Resumo",
-    "sumaryDescription": "Desenvolvedor inovador e orientado a prazos, criando materiais centrados no usuário desde o conceito inicial até o produto final e polido.",
+    "sumaryDescription": "Atuo da definição técnica até a entrega, com foco em qualidade, escalabilidade e experiência do usuário.",
     "educationTitle": "Educação",
     "educationDetails": {
       "degree": "Ciência da Computação",
-      "period": "2021 - 2025",
+      "period": "Mar 2021 – Dez 2025",
       "university": "Universidade Federal do Ceará, Ceará"
     },
     "professionalExperienceTitle": "Experiência Profissional",
     "experience": [
       {
-        "position": "Software Developer",
-        "period": "2023 - 2024",
-        "company": "NEWM",
-        "location": "São José do Rio Preto, SP"
+        "position": "Desenvolvedor Full-Stack",
+        "period": "Jul 2025 – Atual",
+        "company": "Fundação FASTEF",
+        "url": "https://www.linkedin.com/company/fundacaoastef/",
+        "location": "São Paulo, SP (Remoto)",
+        "highlights": [
+          "Desenvolvo e mantenho aplicações web com React, TypeScript e Vite, com foco em desempenho e experiência do usuário.",
+          "Gerencio estado compartilhado com Context API e hooks customizados, e implemento autenticação e autorização com OAuth 2.0.",
+          "Escrevo testes unitários e de integração com Vitest e Testing Library, e mantenho a interface consistente com SCSS e ESLint."
+        ]
       },
       {
-        "position": "Software Developer",
-        "period": "2024 - Presente",
+        "position": "Desenvolvedor Full-Stack",
+        "period": "Jul 2024 – Jul 2025",
+        "company": "Codgo.x",
+        "url": "https://www.linkedin.com/company/codgo-x/",
+        "location": "São Paulo, SP (Remoto)",
+        "highlights": [
+          "Modelei microserviços com Node.js, TypeScript, Express, PostgreSQL, Prisma, RabbitMQ e comunicação em tempo real com WebSocket/Socket.io.",
+          "Desenvolvi aplicações web com Next.js e React, incluindo autenticação em etapas, busca, perfis personalizados, painel administrativo, chat em tempo real e upload de mídia, com AWS S3 e moderação de conteúdo via OpenAI.",
+          "Containerizei os serviços com Docker e automatizei build, testes e deploy com GitHub Actions."
+        ]
+      },
+      {
+        "position": "Desenvolvedor Full-Stack",
+        "period": "Fev 2023 – Jul 2024",
         "company": "FitBank",
-        "location": "Ceará, Brasil"
+        "url": "https://www.linkedin.com/company/fitbank-450/",
+        "location": "Crateús, CE (Presencial)",
+        "highlights": [
+          "Implementei e evoluí fluxos bancários críticos com .NET, ASP.NET MVC, Angular, SQL Server, Azure Functions e Azure Service Bus.",
+          "Refatorei serviços com DDD, Entity Framework Core e Dapper, e contribuí com testes automatizados e revisões de código.",
+          "Migrei dados da base quente (SQL Server) para MongoDB e fiz deploy com Docker e Kubernetes."
+        ]
+      },
+      {
+        "position": "Desenvolvedor Back-End",
+        "period": "Jan 2022 – Fev 2023",
+        "company": "NEWM",
+        "url": "https://www.linkedin.com/company/newm/",
+        "location": "Rio Preto, SP (Remoto)",
+        "highlights": [
+          "Desenvolvi e mantive APIs em arquitetura de microserviços, com foco em isolamento e escalabilidade.",
+          "Construí interfaces dinâmicas com React e TypeScript, usando Redux e Context API para o estado.",
+          "Adicionei testes automatizados com Jest e React Testing Library, documentei o legado para migração e participei de code reviews."
+        ]
       }
     ]
   }

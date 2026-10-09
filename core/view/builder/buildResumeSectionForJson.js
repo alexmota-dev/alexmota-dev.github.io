@@ -26,8 +26,9 @@ function buildResumeSectionForJson(data) {
             <div class="resume-item">
               <h4>${exp.position}</h4>
               <h5>${exp.period}</h5>
-              <h6><a href="https://www.linkedin.com/company/${exp.company.toLowerCase()}/" target="_blank">${exp.company}</a></h6>
+              <h6><a href="${exp.url}" target="_blank" rel="noopener noreferrer">${exp.company}</a></h6>
               <p><em>${exp.location}</em></p>
+              ${exp.highlights?.length ? `<ul>${exp.highlights.map(item => `<li>${item}</li>`).join("")}</ul>` : ""}
             </div>
           `).join('')}
         </div>
