@@ -21,10 +21,10 @@ const projects = [
   { title: "Dama - Spring Boot", category: "Technology", image: "api/dama-back-api.png" },
   { title: "Programa Indique e Ganhe - React", category: "Web_Design", image: "web/programaindiqueeganhe-login.png" },
   { title: "Programa Indique e Ganhe - React", category: "Web_Design", image: "web/programaindiqueeganhe-register.png" },
-  { title: "Programa Indique e Ganhe - API", category: "Technology", image: "api/Authentication.jpg" },
-  { title: "React Native - BoraLá - Mobilidade", category: "App", image: "mobile/borala-wallet.png" },
-  { title: "React Native - BoraLá - Mobilidade", category: "App", image: "mobile/borala-races.png" },
-  { title: "React Native - BoraLá - Mobilidade", category: "App", image: "mobile/borala-map.png" },
+  { title: "Programa Indique e Ganhe - Spring Boot", category: "Technology", image: "api/Authentication.jpg" },
+  { title: "BoraLá - React Native", category: "App", image: "mobile/borala-wallet.png" },
+  { title: "BoraLá - React Native", category: "App", image: "mobile/borala-races.png" },
+  { title: "BoraLá - React Native", category: "App", image: "mobile/borala-map.png" },
 ];
 
 const portfolioContainer = document.querySelector(".portfolio-container");
