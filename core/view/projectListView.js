@@ -1,14 +1,27 @@
 const projects = [
   {
-    title: "Chance Sports",
+    title: "Chance Sports - React",
     category: "Web_Design",
     image: "web/chance-sports.png",
     url: "https://chancesports.com.br/",
     cover: true
   },
-  { title: "React - Full Stack Project", category: "Web_Design", image: "web/programaindiqueeganhe-login.png" },
-  { title: "React - Full Stack Project", category: "Web_Design", image: "web/programaindiqueeganhe-register.png" },
-  { title: "React - Full Stack Project", category: "Technology", image: "api/Authentication.jpg" },
+  {
+    title: "Chance Sports - Node",
+    category: "Technology",
+    image: "api/chancesports-back-api.png",
+    url: "https://chancesports.com.br/"
+  },
+  {
+    title: "Dama - React",
+    category: "Web_Design",
+    image: "web/dama-front-web.png",
+    cover: true
+  },
+  { title: "Dama - Spring Boot", category: "Technology", image: "api/dama-back-api.png" },
+  { title: "Programa Indique e Ganhe - React", category: "Web_Design", image: "web/programaindiqueeganhe-login.png" },
+  { title: "Programa Indique e Ganhe - React", category: "Web_Design", image: "web/programaindiqueeganhe-register.png" },
+  { title: "Programa Indique e Ganhe - API", category: "Technology", image: "api/Authentication.jpg" },
   { title: "React Native - BoraLá - Mobilidade", category: "App", image: "mobile/borala-wallet.png" },
   { title: "React Native - BoraLá - Mobilidade", category: "App", image: "mobile/borala-races.png" },
   { title: "React Native - BoraLá - Mobilidade", category: "App", image: "mobile/borala-map.png" },
